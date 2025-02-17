@@ -1,0 +1,15 @@
+name: Calling Java Workflow from a Different Repo
+
+on:
+  workflow_dispatch:
+
+jobs:
+  call-java-workflow:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Call Java Workflow in Different Repo
+        uses: Sora-fication/project-fication/.github/workflows/parameterized-java.yml@main
+        with:
+          java_version: '17'
+          maven_directory: './java-app'
